@@ -31,7 +31,6 @@ public class BetaToUnicode{
 			TransCoder tc = new TransCoder("BetaCode","UnicodeC");
 			for(int i = 0; i<filePathList.size()-1;i++){
 				result = tc.getString(new File(filePathList.get(i)));
-				
 				File output = new File("/Users/williamstewart/Desktop/UnicodeClassics/" + fileNameList.get(i));
 				FileWriter writer = new FileWriter(output);
 				writer.write(result);
