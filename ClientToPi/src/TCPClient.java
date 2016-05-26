@@ -25,7 +25,7 @@ public class TCPClient {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//First Change from mac2
-		//First change from pc
+		//First change from pc this is cool
 		try{
 			while(exit!=true){
 				sendMessage();
