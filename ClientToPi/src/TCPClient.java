@@ -24,7 +24,7 @@ public class TCPClient {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//First Change
+		//First Change from mac
 		try{
 			while(exit!=true){
 				sendMessage();
