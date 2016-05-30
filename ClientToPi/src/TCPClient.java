@@ -7,7 +7,7 @@ public class TCPClient {
 	
 	public static void sendMessage() throws Exception{
 		String output;
-		String returnedString;
+		String returnedString = null;
 		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
 		Socket clientSocket = new Socket("10.102.55.26",6789);
 		DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
@@ -17,8 +17,10 @@ public class TCPClient {
 			exit = true;
 		}
 		outToServer.writeBytes(output + '\n');
+		while((returnedString = inFromServer.readLine()) != null){
 		returnedString = inFromServer.readLine();
 		System.out.println("Server: " + returnedString);
+		}
 		clientSocket.close();
 	}
 
