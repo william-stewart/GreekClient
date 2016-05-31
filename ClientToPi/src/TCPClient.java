@@ -17,11 +17,11 @@ public class TCPClient {
 			exit = true;
 		}
 		outToServer.writeBytes(output + '\n');
-		while((returnedString = inFromServer.readLine()) != null){
 		returnedString = inFromServer.readLine();
+		returnedString = returnedString.replaceAll("/", "\n");
 		System.out.println("Server: " + returnedString);
-		}
 		clientSocket.close();
+		
 	}
 
 	public static void main(String[] args) {
