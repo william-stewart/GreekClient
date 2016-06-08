@@ -9,7 +9,7 @@ public class TCPClient {
 		String output;
 		String returnedString = null;
 		BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-		Socket clientSocket = new Socket("10.102.55.26",6789);
+		Socket clientSocket = new Socket("pi09.fu.campus",6789);
 		DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
 		BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		clientSocket.setKeepAlive(true);
