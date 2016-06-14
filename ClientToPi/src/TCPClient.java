@@ -27,7 +27,6 @@ public class TCPClient {
 			System.out.println("received no response from master node");
 		}
 		clientSocket.close();
-		
 	}
 
 	public static void main(String[] args) {
